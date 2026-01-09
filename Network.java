@@ -76,6 +76,9 @@ public class Network {
            if(user1 == null || user2 == null){
             return false;
         }
+        if(user1.getName().equals(user2.getName())){
+             return false;
+        }
         return user1.addFollowee(name2);
     }
     
@@ -140,10 +143,10 @@ public class Network {
     public String toString() {
        //// Replace the following statement with your code
     
-       String ans = "";
+       String ans = "Network:";
        for(int i = 0; i < userCount; i++){
-        ans = ans + "\n" + users[i] + " ";
-       }
-       return ans;
+        ans = ans + "\n" + users[i];
     }
+     return ans;
+  }
 }
